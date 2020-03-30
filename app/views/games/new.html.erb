@@ -1,16 +1,15 @@
 <h2>New game</h2>
 <br>
-<p>
 <ul class="list-inline px-2">
-  <% @letters.each do |letter| %>
+  <% @random_word.each do |letter| %>
     <li class="list-inline-item btn-primary"> <%= letter %></li>
   <% end %>
 </ul>
-</p>
 <br>
 
-<form action="/score" method="post">
+<form action="/score" method="POST">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :random_word, @random_word %>
   <div class="form-text">
     <input type="text" class="form-text" name="word" placeholder="type your word here">
   </div>
