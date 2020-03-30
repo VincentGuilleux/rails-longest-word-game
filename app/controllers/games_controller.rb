@@ -13,11 +13,9 @@ class GamesController < ApplicationController
     word_in_grid = word_array.all? { |e| params[:random_word].include?(e) }
     if english_word_check['found']
       # the key found returns a boolean if included in English in Wagon dic app
-      word_in_grid ? @result = word_array.length : @result = 'outside the grid'
+      word_in_grid ? session[:score] = session[:score] + word_array.length : @result = 'outside the grid'
     else @result = 'not an english word'
     end
   end
-
-  private
 
 end
