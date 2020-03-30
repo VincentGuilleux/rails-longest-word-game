@@ -5,7 +5,7 @@
 Sorry but <%= params[:word] %> is not an english Word
 <%elsif @result == "outside the grid" %>
 Sorry but <%= params[:word] %> cant be built from the grid
-<%else%> Congratulations! <%= params[:word] %> is a valid English word!
+<%else%> Congratulations! <%= params[:word] %> is a valid English word, you scored <%= @result %> !
 <%end%>
 
 </p>
