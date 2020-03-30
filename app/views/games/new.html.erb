@@ -9,7 +9,7 @@
 </p>
 <br>
 
-<form action="/score">
+<form action="/score" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <div class="form-text">
     <input type="text" class="form-text" name="word" placeholder="type your word here">

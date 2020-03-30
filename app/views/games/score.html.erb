@@ -1,2 +1,11 @@
-<%= params[:word] %>
-<%= @result %>
+<h2>Result</h2>
+<p>
+
+<%if @result == "not an english word" %>
+Sorry but <%= params[:word] %> is not an english Word
+<%elsif @result == "outside the grid" %>
+Sorry but <%= params[:word] %> cant be built from the grid
+<%else%> Congratulations! <%= params[:word] %> is a valid English word!
+<%end%>
+
+</p>
